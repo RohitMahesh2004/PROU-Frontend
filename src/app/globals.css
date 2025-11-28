@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+@keyframes subtle-pulse {
+  0% {
+    text-shadow: 0 0 6px rgba(0,190,255,0.55);
+    transform: translateY(0);
+  }
+  50% {
+    text-shadow: 0 0 8px rgba(0,200,255,0.5);
+    transform: translateY(-1px);
+  }
+  100% {
+    text-shadow: 0 0 6px rgba(0,190,255,0.55);
+    transform: translateY(0);
+  }
+}
+
+.animate-subtle-pulse {
+  animation: subtle-pulse 3.5s ease-in-out infinite;
+}
+
+/* reduce the initial blur used on characters when they animate in */
+.motion-span-initial {
+  filter: blur(6px);
+}
